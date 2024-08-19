@@ -1,0 +1,326 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Ivory background */
+    color: #333; /* Default text color */
+}
+
+/* Full-Screen Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.7); /* Slight darkening to make text pop */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    font-family: 'Petit Formal Script', cursive; /* Elegant cursive font */
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+}
+
+/* Side Navigation */
+.side-nav {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.side-nav ul li {
+    margin-bottom: 15px;
+}
+
+.side-nav ul li a {
+    color: #f6f4f4; /* Black text for linked categories */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.side-nav ul li a:hover {
+    color: #ff4500; /* Accent color on hover */
+}
+
+/* Social Links */
+.social-links {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff4500; /* Accent color on hover */
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #004d00;
+}
+
+.content-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Project Gallery */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-item {
+    background-color: #e0e0e0; /* Light grey background for projects */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #004d00;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #004d00; /* Deep green button */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003300; /* Darker green on hover */
+}
+
+/* Blog Section */
+#blog {
+    background-color: #f8f8f8;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#blog h2 {
+    font-size: 36px;
+    color: #004d00; /* Deep green for blog section title */
+    margin-bottom: 40px;
+}
+
+#blog p {
+    font-size: 18px;
+    color: #333; /* Default text color */
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #004d00; /* Deep green background */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #003300; /* Darker green on hover */
+    transform: translateY(-5px); /* Slight movement on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .side-nav ul li a {
+        font-size: 14px;
+    }
+
+    .project-item {
+        width: 100%; /* Full-width project items on smaller screens */
+    }
+
+    .social-links {
+        bottom: 10px;
+        left: 10px;
+    }
+}
+/* Base Styles for Desktop and Larger Screens */
+.hero-title {
+    font-size: 72px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    font-family: 'Petit Formal Script', cursive; /* Elegant cursive font */
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+}
+
+.content-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 48px; /* Smaller font size for mobile */
+    }
+
+    .hero-subtitle {
+        font-size: 18px; /* Adjust subtitle size */
+    }
+
+    .side-nav ul li a {
+        font-size: 14px; /* Smaller text in the side navigation */
+    }
+
+    .project-item {
+        width: 100%; /* Full-width project items on smaller screens */
+        margin-bottom: 20px; /* Add space between projects */
+    }
+
+    .social-links {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .content-section {
+        padding: 40px 10px; /* Reduce padding on mobile for better spacing */
+    }
+}
+
+/* Additional Media Query for Very Small Screens (e.g., 480px and below) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 36px; /* Further reduce font size for very small screens */
+    }
+
+    .hero-subtitle {
+        font-size: 16px; /* Adjust subtitle size for small screens */
+    }
+
+    .side-nav ul {
+        text-align: center; /* Center the side navigation for small screens */
+    }
+
+    .side-nav ul li a {
+        font-size: 12px; /* Smaller text in the side navigation */
+    }
+
+    .content-section {
+        padding: 20px 5px; /* Further reduce padding */
+    }
+}
